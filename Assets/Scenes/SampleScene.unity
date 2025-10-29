@@ -11199,6 +11199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerMovement
   moveSpeed: 10
+  jumpSpeed: 20
 --- !u!114 &1671513717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11276,6 +11277,14 @@ PrefabInstance:
     - target: {fileID: 2622524082395121619, guid: 52576fe825617cb4b92281dbfde9a091, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388915306864549831, guid: 52576fe825617cb4b92281dbfde9a091, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388915306864549831, guid: 52576fe825617cb4b92281dbfde9a091, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5609611116417854380, guid: 52576fe825617cb4b92281dbfde9a091, type: 3}
       propertyPath: m_Name
