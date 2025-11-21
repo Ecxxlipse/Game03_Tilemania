@@ -11,7 +11,6 @@ public class playerMovement : MonoBehaviour
     [SerializeField] Vector2 deathKick = new Vector2 (10f, 20f);
     [SerializeField] GameObject bullet;
     [SerializeField] Transform gun;
-    [SerializeField] float restartDelay = 1f;
 
     Vector2 moveInput;
     Rigidbody2D rb;
@@ -103,13 +102,7 @@ public class playerMovement : MonoBehaviour
             isAlive = false;
             myAnimator.SetTrigger("Dying");
             rb.linearVelocity = deathKick;
-            StartCoroutine(RestartAfterDelay());
+            FindAnyObjectByType<GameSession>().ProcessPlayerDeath();
         }
-    }
-
-    private IEnumerator RestartAfterDelay()
-    {
-        yield return new WaitForSeconds(restartDelay);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
