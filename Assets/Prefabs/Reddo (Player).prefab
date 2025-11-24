@@ -258,12 +258,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::playerMovement
   moveSpeed: 10
-  jumpSpeed: 20
+  jumpSpeed: 25
   climbSpeed: 5
   deathKick: {x: 10, y: 20}
   bullet: {fileID: 1126064745517231702, guid: c6682a46a262dc34d8533556e1c6be48, type: 3}
   gun: {fileID: 549240461083767482}
-  restartDelay: 1
 --- !u!114 &2106220431486662144
 MonoBehaviour:
   m_ObjectHideFlags: 0
