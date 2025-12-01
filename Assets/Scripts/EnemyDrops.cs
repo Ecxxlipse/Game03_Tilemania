@@ -3,22 +3,25 @@ using UnityEngine;
 public class EnemyDrops : MonoBehaviour
 {
     [SerializeField] GameObject[] powerups;
-    [SerializeField] float dropChance = 0.2f;
-    public void DropPowerup()
+    [SerializeField] float jumpBoostDC = 0.2f;
+    
+    void DropPowerup()
     {
-        if (powerups.Length > 0 && Random.value <= dropChance)
+        if (powerups.Length > 0 && Random.value <= jumpBoostDC)
         {
             int index = Random.Range(0, powerups.Length);
 
             Instantiate(powerups[index], transform.position, Quaternion.identity);
         }
+        
     }
 
-    private void OnDestroy()
+    void OnDestroy()
     {
         if (gameObject.scene.isLoaded)
         {
             DropPowerup();
+            
         }
     }
 }

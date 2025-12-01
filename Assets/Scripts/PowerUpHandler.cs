@@ -27,7 +27,7 @@ public class PowerUpHandler : MonoBehaviour
         }
     }
 
-    private System.Collections.IEnumerator RemoveJumpBoostAfter(float duration)
+    System.Collections.IEnumerator RemoveJumpBoostAfter(float duration)
     {
         yield return new WaitForSeconds(duration);
 

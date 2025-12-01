@@ -255,4 +255,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyDrops
   powerups:
   - {fileID: 3641291496987925314, guid: 6b69c0219401be74d87a1b4bd362fd8c, type: 3}
-  dropChance: 0.2
+  jumpBoostDC: 0.2
