@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PowerUp : MonoBehaviour
+public class PowerUp_JumpBoost : MonoBehaviour
 {
     public float boostDuration = 5f;
 
