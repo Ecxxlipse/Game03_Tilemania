@@ -8,14 +8,14 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
-    [SerializeField] int score = 0;
+    [SerializeField] public int score = 0;
     [SerializeField] float restartDelay = 1f;
     [SerializeField] float powerupDuration = 0f;
     [SerializeField] PowerUpHandler pwrUp;
 
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] TextMeshProUGUI powerupText;
+//    [SerializeField] TextMeshProUGUI powerupText;
 
     bool pwrUpCheck;
 
@@ -36,9 +36,9 @@ public class GameSession : MonoBehaviour
     {
         livesText.text = playerLives.ToString();
         scoreText.text = score.ToString();
-        pwrUp = GetComponent<PowerUpHandler>();
-        pwrUpCheck = pwrUp.hasJumpBoost;
-        powerupText.text = powerupDuration.ToString();
+//        pwrUp = GetComponent<PowerUpHandler>();
+//        pwrUpCheck = pwrUp.hasJumpBoost;
+//        powerupText.text = powerupDuration.ToString();
 
     }
 
