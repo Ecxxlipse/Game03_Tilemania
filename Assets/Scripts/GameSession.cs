@@ -8,11 +8,16 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
-    [SerializeField] int score = 0;
+    [SerializeField] public int score = 100;
     [SerializeField] float restartDelay = 1f;
+    [SerializeField] float powerupDuration = 0f;
+    [SerializeField] PowerUpHandler pwrUp;
 
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
+//    [SerializeField] TextMeshProUGUI powerupText;
+
+    bool pwrUpCheck;
 
     void Awake()
     {
@@ -31,6 +36,10 @@ public class GameSession : MonoBehaviour
     {
         livesText.text = playerLives.ToString();
         scoreText.text = score.ToString();
+//        pwrUp = GetComponent<PowerUpHandler>();
+//        pwrUpCheck = pwrUp.hasJumpBoost;
+//        powerupText.text = powerupDuration.ToString();
+
     }
 
     public void ProcessPlayerDeath()
@@ -49,6 +58,27 @@ public class GameSession : MonoBehaviour
     {
         score += pointsToAdd;
         scoreText.text = score.ToString();
+    }
+
+    //store
+
+        public bool spendCoins(int amount)
+    {
+        if (score >= amount)
+        {
+            score -= amount;
+            return true;
+        }
+        return false;
+    }
+
+    public void PwrUpDuration()
+    {
+        if (pwrUpCheck == true)
+        {
+            powerupDuration = 5f;
+            Debug.Log("powerup Check");
+        }
     }
 
     void TakeLife()

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6137333598887400596}
   - component: {fileID: 6892631655319376721}
   - component: {fileID: 8248119485818485334}
+  - component: {fileID: 739622794942224141}
+  - component: {fileID: -2302200466856946505}
   m_Layer: 11
   m_Name: Goober (Enemy)
   m_TagString: Enemy
@@ -240,3 +242,33 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.10215449, y: 0.70071816}
   m_EdgeRadius: 0
+--- !u!114 &739622794942224141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6374418971911126758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2052dff1606e3374991a64a2c26957a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDrops
+  powerups:
+  - {fileID: 3641291496987925314, guid: 6b69c0219401be74d87a1b4bd362fd8c, type: 3}
+  jumpBoostDC: 0.2
+--- !u!114 &-2302200466856946505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6374418971911126758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8bd111147d3074580d0737e488f54f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDrops1
+  powerups:
+  - {fileID: 3641291496987925314, guid: f35a3fc2d1c94314c9448182746298b5, type: 3}
+  speedBoostDC: 0.2

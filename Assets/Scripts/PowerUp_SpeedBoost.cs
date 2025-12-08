@@ -1,8 +1,18 @@
 using UnityEngine;
 
-public class PowerUp : MonoBehaviour
+public class PowerUp_SpeedBoost : MonoBehaviour
 {
     public float boostDuration = 5f;
+
+    public bool hasShopItem1 = false;
+
+    void itemCheck()
+    {
+        if (hasShopItem1 == true)
+        {
+            boostDuration = 6f;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,7 +22,7 @@ public class PowerUp : MonoBehaviour
 
             if (handler != null)
             {
-                handler.ApplyJumpBoost(boostDuration);
+                handler.ApplySpeedBoost(boostDuration);
             }
             
             Destroy(gameObject);
