@@ -8,7 +8,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
-    [SerializeField] public int score = 0;
+    [SerializeField] public int score = 100;
     [SerializeField] float restartDelay = 1f;
     [SerializeField] float powerupDuration = 0f;
     [SerializeField] PowerUpHandler pwrUp;
@@ -58,6 +58,18 @@ public class GameSession : MonoBehaviour
     {
         score += pointsToAdd;
         scoreText.text = score.ToString();
+    }
+
+    //store
+
+        public bool spendCoins(int amount)
+    {
+        if (score >= amount)
+        {
+            score -= amount;
+            return true;
+        }
+        return false;
     }
 
     public void PwrUpDuration()
