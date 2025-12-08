@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 1012474459}
   - component: {fileID: 1012474458}
   - component: {fileID: 1012474460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BG_mountains_noon_1024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
